@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en-UK">
+    <head>
+        <title>Headlines</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+        <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    </head>
+    <body>
+        <h1>Headlines</h1>
+        {% for article in articles %}
+            <b><a href="{{article.link}}">{{article.title}}</a></b><br />
+            <i>{{article.published}}</i><br />
+            <p title="Article Summary">{{article.summary}}  </p>
+            <hr />
+        {% endfor %}
+    </body>
+</html>
